@@ -1,0 +1,12 @@
+###tarea mala onda
+tdes<- c(3.4, 4.8, 3.3, 5.6, 3.2, 2.9, 1.9, 2.8, 6.0, 4.3, 2.2)
+oc<- data.frame(tdes)
+desoc<- ts(oc, start=c(2005,1 ), frequency = 4)
+layout(1:2)
+plot(desoc, main= "tasa de desocupación")
+plot (aggregate(desoc))
+jpeg("imagen.jpg")
+layout(1:2)
+plot (desoc, main= "tasa de desocupación")
+plot (aggregate(desoc))
+dev.off()
